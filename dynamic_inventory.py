@@ -22,10 +22,10 @@ inventory = {
 
 # Add host vars (replace with your IPs)
 ip_map = {
-    "web1.lab.local": "10.0.8.164",
-    "web2.lab.local": "192.168.1.21",
-    "app1.lab.local": "192.168.1.22",
-    "db1.lab.local": "192.168.1.23",
+    "web1.lab.local": "10.0.8.193",
+    "web2.lab.local": "10.0.8.193",
+    "app1.lab.local": "10.0.8.193",
+    "db1.lab.local": "10.0.8.193",
 }
 for h in sum(hosts.values(), []):
     inventory["_meta"]["hostvars"][h] = {"ansible_host": ip_map.get(h, h)}
